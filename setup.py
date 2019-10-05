@@ -14,7 +14,8 @@ setup(
     url='https://github.com/abdwivedi7/pgbackup',
     packages=find_packages('src'),
     package_dir={'': 'src'},
-    install_required=['boto3'],
+    install_requires=['boto3'],
+    python_requires='>=3.6',
     entry_points={
         'console_scripts':[
             'pgbackup=pgbackup.cli:main'
