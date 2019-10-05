@@ -12,5 +12,12 @@ setup(
     long_description=long_description,
     long_description_content_type='text/markdown',
     url='https://github.com/abdwivedi7/pgbackup',
-    packages=find_packages('src')
+    packages=find_packages('src'),
+    package_dir={'': 'src'},
+    install_required=['boto3'],
+    entry_points={
+        'console_scripts':[
+            'pgbackup=pgbackup.cli:main'
+            ],
+        }
 )
